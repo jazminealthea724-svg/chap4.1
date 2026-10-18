@@ -1,0 +1,165 @@
+import java.util.Scanner;
+public class Main {
+    static Scanner input = new Scanner(System.in);
+
+    static void primenum1() {
+        System.out.print("Enter an integer num: ");
+        int num = input.nextInt();
+
+        boolean prime = true;
+
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0) {
+                prime = false;
+            }
+        }
+
+        if (prime) {
+            System.out.println(num + " is a prime number.");
+        } else {
+            System.out.println(num + " is not a prime number.");
+        }
+        System.out.println();
+    }
+
+    static void primefac2() {
+        System.out.print("Enter an integers: ");
+        int num = input.nextInt();
+        int counter = 2;
+
+        while (counter <= num) {
+            if (num % counter == 0) {
+                System.out.println(counter);
+                num = num / counter;
+            } else {
+                counter++;
+                System.out.println();
+            }
+        }
+    }
+    static void investment3() {
+
+        double investment = 2500.00;
+        double target = 5000.00;
+        double rate = 0.075;
+        int year = 0;
+
+        while (investment < target) {
+            investment = investment + (investment * rate);
+            year++;
+        }
+                System.out.println("it will take" + year +"years for the investment to be worth at least 5000.");
+                System.out.println("Final Investment Value:" + investment);
+                System.out.println();
+            }
+        static void carRecall4() {
+            System.out.print("Enter the cars model num or 0 to quit: ");
+            int num = input.nextInt();
+
+            while (num != 0) {
+                if (num == 199 || num == 179 || (num >= 189 && num <= 195) || num == 221 || num == 780) {
+                    System.out.println("Your car is defected, it must be repaired.");
+                } else {
+                    System.out.println("Your car is not defective.");
+                }
+                System.out.print("Enter the car's model number or 0 to quit: ");
+                num = input.nextInt();
+                System.out.println();
+            }
+        }
+        static void digitsdisplay5() {
+            System.out.print("Enter a positive integers: ");
+            int i = input.nextInt();
+            int t = i;
+            int d =1;
+
+            while ( t >= 10) {
+                d = d * 10;
+                t = t / 10;
+            }
+            while (d > 0) {
+                int digit = i / d;
+                System.out.println(digit);
+
+                i = i % d;
+                d = d / 10;
+                System.out.println();
+            }
+        }
+        static void digitsum6() {
+            System.out.print("Enter a positive integers: ");
+            int num = input.nextInt();
+            int sum = 0;
+
+            while (num > 0) {
+                int d = num % 10;
+                sum = sum + d;
+                num = num / 10;
+            }
+            System.out.println("The sum of the digits is: " + sum);
+            System.out.println();
+        }
+        static void cubesum7(){
+            System.out.println("Enter a positive integers:");
+            int n = input.nextInt();
+            int s = 0;
+
+            while (n > 0) {
+                int digit = n % 10;
+                s = s + (digit * digit * digit);
+                n = n / 10;
+            }
+                System.out.println("The sum of the cubes is: " + s);
+                System.out.println();
+        }
+        static void guessingG8(){
+            int secretnum = 19;
+            int guess = 0;
+
+            while (guess != secretnum) {
+                System.out.print("Enter a number between 1 and 20: ");
+                guess = input.nextInt();
+
+                if (guess != secretnum) {
+                    System.out.println("Try again.");
+                }
+            }
+            System.out.println("You won!");
+            System.out.println();
+        }
+        static void powersoftable9() {
+            System.out.printf("%-8s%-8s%-8s%-8s%-8s%n", "x^1", "x^2", "x^3", "x^4", "x^5");
+            System.out.printf("%-8s%-8s%-8s%-8s%-8s%n", "1", "1", "1", "1", "1");
+            System.out.printf("%-8s%-8s%-8s%-8s%-8s%n", "2", "4", "8", "16", "32");
+            System.out.printf("%-8s%-8s%-8s%-8s%-8s%n", "3", "9", "27", "81", "243");
+            System.out.printf("%-8s%-8s%-8s%-8s%-8s%n", "4", "16", "64", "256", "1024");
+            System.out.printf("%-8s%-8s%-8s%-8s%-8s%n", "5", "25", "125", "625", "3125");
+            System.out.printf("%-8s%-8s%-8s%-8s%-8s%n", "6", "36", "216", "1296", "7776");
+            System.out.println();
+        }
+        static void gcd10() {
+            System.out.print("Enter a num: ");
+            int number1 = input.nextInt();
+            System.out.print("Enter a second num: ");
+            int number2 = input.nextInt();
+
+            while (number2 > 0) {
+                int temp = number1 % number2;
+                number1 = number2;
+                number2 = temp;
+            }
+            System.out.println("The GCD is: " + number1);
+        }
+        public static void main (String[]args){
+            primenum1();
+            primefac2();
+            investment3();
+            carRecall4();
+            digitsdisplay5();
+            digitsum6();
+            cubesum7();
+            guessingG8();
+            powersoftable9();
+            gcd10();
+                }
+            }

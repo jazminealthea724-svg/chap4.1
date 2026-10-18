@@ -1,0 +1,165 @@
+import java.util.Scanner;
+
+public class Main {
+    static Scanner input = new Scanner(System.in);
+
+    static void ObjectHeight1() {
+        System.out.print("Enter a time that is less than 4.5 seconds: ");
+        double time = input.nextDouble();
+
+        double h = 100 - 4.9 * time * time;
+        System.out.print("The height of an object is: " + h + "m");
+        System.out.println();
+    }
+    static void  PizzaCost2 () {
+        System.out.print("Enter the diameter of the pizza in inches: ");
+        int diameter = input.nextInt();
+
+        double m = 0.75 + 1.00 + 0.05 * diameter * diameter;
+        System.out.print("The cost of making the pizza is: " + m  + "dollar");
+        System.out.println();
+    }
+    static void  CollegeCalculator3 () {
+        System.out.println("====College calculator for expenses====");
+        System.out.println();
+        System.out.print("Enter tuition cost: ");
+        int tuition = input.nextInt();
+
+        System.out.print("Enter rent cost: ");
+        int rent = input.nextInt();
+
+        System.out.print("Enter books cost: ");
+        int books = input.nextInt();
+
+        System.out.print("Enter scholarship amount: ");
+        int scholarship = input.nextInt();
+
+        int expenses = tuition + rent + books;
+        int total = expenses - scholarship;
+        System.out.println("Total college expenses: " + expenses);
+        System.out.println("Money needed for college: " + total);
+    }
+    static void JavaTerminology4 () {
+        System.out.println("JavaTerminology: ");
+        System.out.println();
+        System.out.println("Keyword: ");
+        System.out.println("A word that has special meaning to the java compiler and therefore cannot be used as a variable or constant identifier");
+        System.out.println();
+        System.out.println("literal: ");
+        System.out.println("An actual value");
+        System.out.println();
+        System.out.println("Case sensitive: ");
+        System.out.println("An uppercase letter is different from the same letter in lowercase");
+        System.out.println();
+        System.out.println("Data type: ");
+        System.out.println("the kind of information a variable store");
+        System.out.println();
+        System.out.println("Syntax error: ");
+        System.out.println("An error caused by a statement that violates the rules of java.");
+        System.out.println();
+    }
+    static void Energy5 () {
+        System.out.print("Enter the mass of kilograms: ");
+        int m = input.nextInt();
+        double e = m * 3.0E8 * 3.0E8;
+        double b = e / 360000;
+
+        System.out.println("The energy produced in Joules is = " + e);
+        System.out.println("The number of 100-watt light bulbs powered = " + b);
+        System.out.println();
+    }
+    static void Change6() {
+        System.out.print("Enter the change in cents: ");
+        int c = input.nextInt();
+        System.out.println();
+
+        int quarter = c /25;
+        c = c % 25;
+        int dime = c / 10;
+        c = c % 10;
+        int nickels = c / 5;
+        c = c % 5;
+        int pennies = c;
+        System.out.println("The minimum num of coins is: ");
+        System.out.println("Quarters: " + quarter);
+        System.out.println("Dime: " + dime);
+        System.out.println("Nickels: " + nickels );
+        System.out.println("Pennies: " + pennies);
+        System.out.println();
+    }
+    static void Digits7 () {
+        System.out.print("Enter an three digit number: ");
+        int num = input.nextInt();
+
+        int hundred = num / 100;
+        num = num % 100;
+        int tens = num / 10;
+        num = num % 10;
+        int ones = num % 10;
+
+        System.out.println("The hundred place digit is: " + hundred);
+        System.out.println("The tens place digit is: " + tens);
+        System.out.println("The ones place digit is: " + ones);
+        System.out.println();
+    }
+    static void DivAndMod8 () {
+        System.out.println("enter an integers: ");
+        int f = input.nextInt();
+        System.out.println("Enter a second integers: ");
+        int s= input.nextInt();
+
+        System.out.println(f + "/" + s + "=" + (f / s ));
+        System.out.println(f + "%" + s + "=" + (f % s ));
+        System.out.println(s + "/" + f + "=" + (s / f));
+        System.out.println(s + "%" + f + "=" + (s % f));
+        System.out.println();
+    }
+    static void TimeConver9() {
+        System.out.print("Enter the time minutes: ");
+        int t = input.nextInt();
+        System.out.println("The time is: " + t / 60 + ":" + t % 60);
+        System.out.println();
+    }
+    static void Sleep10 () {
+        System.out.print("Enter your birthdate: ");
+        System.out.print("year: ");
+        int by = input.nextInt();
+        System.out.print("month: ");
+        int bm = input.nextInt();
+        System.out.print("day: ");
+        int bd = input.nextInt();
+        System.out.print("Enter todays date: ");
+        System.out.print("year: ");
+        int ty = input.nextInt();
+        System.out.print("month: ");
+        int tm= input.nextInt();
+        System.out.print("day: ");
+        int td = input.nextInt();
+
+        int birthdate = (by * 365) + (bm* 30) + bd;
+        int today = (ty * 365) + (tm * 30) + td;
+        int daysalive = today - birthdate;
+        int hoursslept = daysalive * 8;
+
+        System.out.println("You have been alive for " + daysalive + " days.");
+        System.out.println("You have slept for " + hoursslept + " hours.");
+    }
+    static void wowch () {
+        System.out.println("Sir sorry late ko napo napasa, arigatooo!");
+    }
+    public static void main(String [] args) {
+        ObjectHeight1();
+        PizzaCost2();
+        CollegeCalculator3();
+        JavaTerminology4 ();
+        Energy5();
+        Change6();
+        Digits7();
+        DivAndMod8();
+        TimeConver9();
+        Sleep10();
+        wowch();
+            }
+        }
+
+
